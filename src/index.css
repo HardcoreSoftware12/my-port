@@ -9,6 +9,12 @@
 }
 
 body{
-  
   background-color: #20232a;
+  
 }
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Typewriter from 'typewriter-effect';
 import me from "../img/last1.png"
 
-function Home() {
+function Home({hamBurger}) {
     const [typeWriter,setTypeWriter] = useState(false);
 
 
@@ -19,10 +19,18 @@ function Home() {
     
   return (
 
-    <div className='grid sm:grid-rows-2 text-md md:  lg:grid-cols-5 mt-20 h-full '>
-        <div className='mx-auto sm:row-span-1 mt-5 h-[200px] md:h-[200px]
-         col-span-3'>
-        <h1 className='text-5xl text-[#D63484]  py-4'>
+    <div className={` ${hamBurger ? "mt-[300px]" : ""} max-h-[350px] grid grid-rows-2 text-center gap-5 
+    lg:grid-cols-5`}>
+        <div className='mx-auto w-[80%] h-[200px] row-span-1 flex flex-col justify-start items-center 
+        
+        
+        lg:col-span-3 mt-[100px] 
+        xl:mt-[150px]
+        '>
+        <h1 className='text-[#D63484] text-2xl
+        sm:text-4xl
+        xl:text-5xl
+        2xl:text-6xl'>
         
                 
                     <Typewriter
@@ -36,20 +44,15 @@ function Home() {
 
               }}
             />
-
-                
-            
-            
-            
-            
         </h1>
-        <h2 className='text-white'>
+        <h1 className='text-white text-sm
+        sm:text-2xl pt-5  '>
         {
                 typeWriter && (
                     <Typewriter
               onInit={(typewriter) => {
                 typewriter
-                  .typeString("I am Full-Stack 🌐 Web Developer and Passionate Programmer ⌨️")
+                  .typeString("I am Full-Stack 🌐 Web Developer && Passionate Programmer ⌨️")
     
                   .pauseFor(2500)
     
@@ -62,17 +65,22 @@ function Home() {
             }
            
        
-        </h2>
+        </h1>
 
             
         </div>
 
         {/* //IMAGE */}
-        <div className='flex justify-center mx-auto sm:row-span-1 w-[50%]   col-span-2'>
-        {/* <div className='sm:w-[100%] flex w-[70%]  items-start'>  */}
-            <img src={me} alt="" className='rounded-full' />
+        <div className='row-span-1  pt-1 w-[50%] mx-auto
+        sm:pt-5
+        md:w-[400px] mt-0
+        lg:col-span-2 mt-[60px] 
+        xl:mt-12
+        2xl:
+        '>
+            <img src={me} alt="" className='rounded-full  lg:w-[60%] xl:w-[90%]' />
             
-        {/* </div> */}
+       
         </div>
 
     </div>

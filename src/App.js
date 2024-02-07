@@ -1,6 +1,7 @@
 import { createBrowserRouter,RouterProvider } from "react-router-dom";
 import Home from "./pages/HomePage";
 import Hero from "./components/Hero";
+import Education from "./components/Education";
 
 
 function App() {
@@ -12,6 +13,10 @@ function App() {
     {
       path:"/hero",
       element:<Hero/>
+    },
+    {
+      path:"/education",
+      element:<Education/>
     },
 
   ])
