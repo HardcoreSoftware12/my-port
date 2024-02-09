@@ -19,7 +19,7 @@ function Home({hamBurger}) {
     
   return (
 
-    <div className={` ${hamBurger ? "mt-[300px]" : ""} max-h-[350px] grid grid-rows-2 text-center gap-5 
+    <div className={` ${hamBurger ? "mt-[190px]" : ""} max-h-[350px] grid grid-rows-2 text-center gap-5 
     lg:grid-cols-5`}>
         <div className='mx-auto w-[80%] h-[200px] row-span-1 flex flex-col justify-start items-center 
         

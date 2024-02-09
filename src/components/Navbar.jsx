@@ -8,11 +8,11 @@ function Navbar() {
   const [hamBurger, setHamburger] = useState(false);
 
   return (
-    <div className='min-h-full'>
+    <div className='min-h-full w-[100%] '>
       {/* NAVBAR STARTS */}
       {/* DESKTOP */}
        <div className=  "mx-auto  w-[50%] flex justify-around content-between px-1 py-5 text-white bg-opacity-40 bg-[#1F2544] mt-10 rounded-3xl invisible lg:visible text-2xl">
-        <a href="/" className='hover:text-black' >Home</a>
+        <a href="/" className='hover:text-black ' >&lt; Home <span>/</span> &gt; </a>
 
         <a href="#edu"> Education </a>
         
@@ -25,16 +25,17 @@ function Navbar() {
     </div>
 
     {/* MOBILE */}
-    <div className='relative bg-white visible lg:invisible text-2xl'>
-    <div className='absolute right-2 -top-12'>
-    <span className='text-4xl cursor-pointer' onClick={()=>{
+    <div className='absolute  w-[100%] visible top-10  lg:invisible text-2xl '>
+    <div className='relative'>
+    <span className='text-4xl cursor-pointer absolute top-10 right-5
+    '  onClick={()=>{
       setHamburger(!hamBurger)
 
     }}>🍔</span>
     </div>
     {
       hamBurger && (
-        <nav className='flex flex-col justify-between items-center h-[300px] w-[100%] border absolute right-0 top-0 z-10 bg-white'>
+        <nav className='flex flex-col justify-between items-center h-[300px] mt-[19%] z-10 bg-gray'>
         <a href="/" className='hover:text-black' >Home</a>
   
         <a href="#edu"> Education </a>
