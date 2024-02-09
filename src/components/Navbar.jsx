@@ -11,17 +11,14 @@ function Navbar() {
     <div className='min-h-full w-[100%] '>
       {/* NAVBAR STARTS */}
       {/* DESKTOP */}
-       <div className=  "mx-auto  w-[50%] flex justify-around content-between px-1 py-5 text-white bg-opacity-40 bg-[#1F2544] mt-10 rounded-3xl invisible lg:visible text-2xl">
-        <a href="/" className='hover:text-black ' >&lt; Home <span>/</span> &gt; </a>
+       <div className=  "mx-auto  w-[70%] flex justify-around content-between  py-5 text-white bg-opacity-40 bg-[#1F2544] mt-10 rounded-3xl invisible lg:visible text-2xl">
+        <a href="/" className='hover:text-black' >&lt; Home <span>/</span> &gt; </a>
+        <a href="#edu" className='hover:text-black ' >&lt; Education <span>/</span> &gt; </a>
+        <a href="/" className='hover:text-black ' >&lt; Skills <span>/</span> &gt; </a>
+        <a href="/" className='hover:text-black ' >&lt; Projects <span>/</span> &gt; </a>
+        <a href="/" className='hover:text-black ' >&lt; Contact <span>/</span> &gt; </a>
 
-        <a href="#edu"> Education </a>
         
-
-        <a href="/">Skills</a>
-        
-        <a href="/">Projects</a>
-
-        <a href="/">Contact</a>
     </div>
 
     {/* MOBILE */}
