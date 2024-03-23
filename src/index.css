@@ -9,7 +9,7 @@
 }
 
 body{
-  background-color: #20232a;
+  background-color: #141416;
   
 }
 
@@ -17,4 +17,6 @@ body{
   display: none;
 }
 
-
+section{
+  margin-top: 5%;
+}

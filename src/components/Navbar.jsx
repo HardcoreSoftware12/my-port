@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 // import { a } from 'react-router-dom'
 import Home from './Home';
 import Education from './Education';
+import Projects from './Projects';
 
 function Navbar() {
   
@@ -9,22 +10,13 @@ function Navbar() {
 
   return (
     <div className='min-h-full w-[100%] '>
-      {/* NAVBAR STARTS */}
-      {/* DESKTOP */}
-       <div className=  "mx-auto  w-[70%] flex justify-around content-between  py-5 text-white bg-opacity-40 bg-[#1F2544] mt-10 rounded-3xl invisible lg:visible text-2xl">
-        <a href="/" className='hover:text-black' >&lt; Home <span>/</span> &gt; </a>
-        <a href="#edu" className='hover:text-black ' >&lt; Education <span>/</span> &gt; </a>
-        <a href="/" className='hover:text-black ' >&lt; Skills <span>/</span> &gt; </a>
-        <a href="/" className='hover:text-black ' >&lt; Projects <span>/</span> &gt; </a>
-        <a href="/" className='hover:text-black ' >&lt; Contact <span>/</span> &gt; </a>
-
-        
-    </div>
+    {/* NAVBAR STARTS */}
+     
 
     {/* MOBILE */}
-    <div className='absolute  w-[100%] visible top-10  lg:invisible text-2xl '>
+    <div className='absolute top-5 mb-5  w-[100%] visible  lg:invisible text-2xl  text-white'>
     <div className='relative'>
-    <span className='text-4xl cursor-pointer absolute top-10 right-5
+    <span className='text-4xl cursor-pointer absolute  right-5 top-5
     '  onClick={()=>{
       setHamburger(!hamBurger)
 
@@ -32,7 +24,7 @@ function Navbar() {
     </div>
     {
       hamBurger && (
-        <nav className='flex flex-col justify-between items-center h-[300px] mt-[19%] z-10 bg-gray'>
+        <nav className='flex flex-col justify-between items-center h-[300px]  z-10 bg-gray mt-20 bg-black'>
         <a href="/" className='hover:text-black' >Home</a>
   
         <a href="#edu"> Education </a>
@@ -41,7 +33,7 @@ function Navbar() {
   
         <a href="/">Skills</a>
   
-        <a href="/">Projects</a>
+        <a href="#pro">Projects</a>
   
         <a href="/">Contact</a>
   
@@ -51,22 +43,42 @@ function Navbar() {
     }
    
     </div>
+     {/* DESKTOP */}
+     {
+        !hamBurger && (
+          <div className= "mt-7 mx-auto  w-[70%] flex justify-around content-between  py-5 text-white bg-opacity-40 bg-[#1F2544]  rounded-3xl invisible lg:visible text-2xl">
+          <a href="/" className='hover:text-black' >&lt; Home <span>/</span> &gt; </a>
+          <a href="#edu" className='hover:text-black ' >&lt; Education <span>/</span> &gt; </a>
+          <a href="/" className='hover:text-black ' >&lt; Skills <span>/</span> &gt; </a>
+          <a href="#pro" className='hover:text-black ' >&lt; Projects <span>/</span> &gt; </a>
+          <a href="/" className='hover:text-black ' >&lt; Contact <span>/</span> &gt; </a>
+          </div>
+
+        )
+      }
 
     {/* NAVBAR ENDS */}
 
 
     {/* HOME PAGE */}
-    <main className='sm:mb-[350px] mb-[300px] lg:mb-[40px] xl:mb-[120px]'>
+    <main className='border'>
       <Home hamBurger={hamBurger}/>
     </main>
     {/* HOME PAGE ENDS */}
 
 
     {/* EDUCATION SECTION */}
-    <section id='edu'>
+    <section id='edu' className=' h-[100%]'>
       <Education/>
     </section>
     {/* EDUCATION SECTION ENDS */}
+
+
+     {/* Projects SECTION */}
+     <section id='pro' className=' mt-5'>
+      <Projects/>
+    </section>
+    {/* Projects SECTION ENDS */}
     
 
     </div>

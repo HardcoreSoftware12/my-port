@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 import Typewriter from 'typewriter-effect';
-import me from "../img/last1.png"
+import me from "../assets/img/last1.png"
 
 function Hero() {
     const [typeWriter,setTypeWriter] = useState(false);
